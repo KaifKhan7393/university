@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        /* Styling Card Flipper */
+  .flip{
+      margin-top: -150px;
+    min-height: 50vh;
+    width: 100%;
+    text-align: center;
+    background: #f2f2f2;
+  }
+  .wrapper{
+    padding: 20px;
+    display: grid;
+    margin: 200px 90px auto;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  @media (max-width: 700px) {
+    .wrapper{
+      margin: 200px auto;
+    }
+  }
+  .wrapper .box-1{
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+  }
+  .wrapper .box-1 .front-face{
+    background: var(--primary-color);
+    height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+    transition: all 0.5s ease;
+  }
+  .box-1 .front-face .icon-1{
+    height: 80px;
+  }
+  .box-1 .front-face .icon-1 i{
+    font-size: 65px;
+  }
+  .box-1 .front-face span,
+  .box-1 .back-face span{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .box-1-1 .front-face .icon-1-1 i,
+  .box-1-1 .front-face span{
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .box-1 .back-face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 220px;
+    width: 100%;
+    padding: 30px;
+    color: black;
+    opacity: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transform: translateY(110px) rotateX(-90deg);
+    box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+    transition: all 0.5s ease;
+  }
+  .box-1 .back-face p{
+    margin-top: 10px;
+    text-align: justify;
+  }
+  .box-1:hover .back-face{
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  .box-1:hover .front-face{
+    opacity: 0;
+    transform: translateY(-110px) rotateX(90deg);
+  }
+  
+
+
+
+    </style>
+</head>
+<body>
+        <!-- Card Flipper -->
+        <div class="flip">
+            <div class="wrapper">
+                <div class="box-1">
+                    <div class="front-face">
+                        <div class="icon-1">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span>Web Design</span>
+                    </div>
+                    <div class="back-face">
+                        <span>Web Design</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis
+                            aliquid porro perspiciatis dolores impedit ad.</p>
+                    </div>
+                </div>
+                <div class="box-1">
+                    <div class="front-face">
+                        <div class="icon-1">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span>Web Design</span>
+                    </div>
+                    <div class="back-face">
+                        <span>Web Design</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis
+                            aliquid porro perspiciatis dolores impedit ad.</p>
+                    </div>
+                </div>
+                <div class="box-1">
+                    <div class="front-face">
+                        <div class="icon-1">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span>Advertising</span>
+                    </div>
+                    <div class="back-face">
+                        <span>Advertising</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis
+                            aliquid porro perspiciatis dolores impedit ad.</p>
+                    </div>
+                </div>
+                <div class="box-1">
+                    <div class="front-face">
+                        <div class="icon-1">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <span>Game Design</span>
+                    </div>
+                    <div class="back-face">
+                        <span>Game Design</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem in deleniti vitae beatae veritatis
+                            aliquid porro perspiciatis dolores impedit ad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>

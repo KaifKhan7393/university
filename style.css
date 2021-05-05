@@ -1,0 +1,1045 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+  }
+html{
+    scroll-behavior: smooth;
+}
+
+  /* navbar styling */
+.max-width{
+  /* max-width: 1300px; */
+  max-width: 100%;
+  padding: 0 80px;
+  margin: auto;
+}
+.navbar{
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 20px 0;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  padding: 15px 0;
+  width: 100%;
+  background-color: var(--rare-color);
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 35px;
+  font-family: 'Lobster';
+  cursor: pointer;
+  transition: all 1.4s ease;
+}
+.navbar .logo a:hover{
+  color: #fdf6cd;
+}
+.navbar .logo a span{
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+  color: #fff;
+}
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a{
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+  color: var(--border-color);
+}
+.navbar.sticky .menu li a:hover{
+  color: var(--border-color);
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+  }
+  .scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--rare-color);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .scroll-up-btn:hover{
+    filter: brightness(90%);
+  }
+
+  /* Making Responsive to Nav menu */
+  @media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+  }
+  @media (max-width: 750px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+      /* f00d means fa-times this is used for cancel button */
+        content: "\f00d";   
+  
+    }
+    .navbar .logo a{
+      z-index: -1;
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        /* width: 400px;
+        left: -400px; */
+        width:100% ;
+        left: -100%;
+        top: 0px;
+        background: var(--rare-color);
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .max-width{
+        max-width: 740px;
+    }
+  
+  }
+  
+  @media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }}
+  
+    @media (max-width: 500px) {
+
+      .navbar .logo a{
+        font-size: 28px;
+      }
+  
+      .navbar .menu{
+          position: fixed;
+          height: 100vh;
+          width: 100%; 
+           left: 100%;
+          /* width: 300px;
+          left: -300px; */
+          top: 0;
+          background: #000C66;
+          text-align: center;
+          padding-top: 80px;
+          transition: all 0.3s ease;
+      }
+  
+      .navbar .menu.active{
+          left: 0;
+      }
+      .navbar .menu li{
+          display: block;
+      }
+      .navbar .menu li a{
+          display: inline-block;
+          margin: 20px 0;
+          font-size: 25px;
+      }
+      .scroll-up-btn{
+          right: 15px;
+          bottom: 15px;
+          height: 38px;
+          width: 35px;
+          font-size: 23px;
+          line-height: 38px;
+      }
+  }
+
+  /* Styling Home Page */
+.banner{
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) ,url("./img/university.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .home-text{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align-last: center;
+    color: #fff;
+  }
+  
+
+  /* Making responsive to home page */
+@media only screen and (max-width:1100px){
+    .banner .home-text h1{
+      font-size: 55px;
+    }
+  }
+  @media only screen and (max-width:850px){
+    .banner .home-text h1{
+      font-size: 40px;
+    }
+  }
+  @media only screen and (max-width:700px){
+    .banner .home-text p{
+      font-size: 13px;
+    }
+  }
+  @media only screen and (max-width:620px){
+    .banner .home-text h1{
+      font-size: 33px;
+    }
+    .banner .home-text p{
+      font-size: 10px;
+    }
+  }
+  @media only screen and (max-width:520px){
+    .banner .home-text h1{
+      font-size: 25px;
+    }
+  }
+  @media only screen and (max-width:400px){
+    .banner .home-text h1{
+      font-size: 20px;
+    }
+  }
+
+  /* Styling counter menu */
+.counter-up{
+    background: url("./img/counter-bg.jpg");
+    min-height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px 50px;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .counter-up::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+  }
+  .counter-up .content{
+    z-index: 1;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .counter-up .content .box{
+    /* border: 1px dashed rgba(255,255,255,0.6); */
+    border: 1px solid rgba(255,255,255,0.6);
+    width: calc(25% - 30px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .content .box .icon{
+    font-size: 38px;
+    color: #e6e6e6;
+  }
+  .content .box .counter{
+    font-size: 40px;
+    font-weight: 500;
+    color: #f2f2f2;
+    font-family: sans-serif;
+  }
+  .content .box .text{
+    font-weight: 400;
+    color: #ccc;
+  }
+  @media screen and (max-width: 1036px) {
+    .counter-up{
+      padding: 50px 50px 0 50px;
+    }
+    .counter-up .content .box{
+      width: calc(50% - 30px);
+      margin-bottom: 50px;
+    }
+  }
+  @media screen and (max-width: 580px) {
+    .counter-up .content .box{
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .counter-up{
+      padding: 30px 20px 0 20px;
+    }
+  }
+
+  /* styling Card section */
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 15px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  /* padding: 16px; */
+  text-align: center;
+  /* background-color: #f1f1f1; */
+  background-color: var(--primary-color);
+}
+.upper-part{
+  width: 100%;
+  background-color: var(--rare-color);
+  color: var(--text-color);
+  padding: 15px;
+}
+.card-para{
+  color: black;
+  font-size: 19px;
+  padding: 20px;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 750px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Styling Explore Campus Page */
+.exp-sect{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+h2{
+  color: var(--rare-color);
+  font-size: 39px;
+  margin-left: 20px;
+}
+.campus-section{
+  width: 100%;
+  background:url('./img/university.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  position: relative;
+}
+.camp-card{
+  width: 50%;
+  background-color: var(--rare-color);
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-30%,-60%);
+  padding: 20px;
+  box-shadow: 15px 15px 1px var(--border-color);
+}
+ .camp-card p{
+  margin-top: 10px;
+  font-size: 19px;
+}
+.btn-camp a{
+  color: var(--border-color);
+}
+.btn-camp a:hover{
+  color: var(--position-color);
+}
+
+/* Adding Media query and making responsive to campus section */
+@media only screen and (max-width:750px){
+  .camp-card{
+    width: 75%;
+  }
+}
+@media only screen and (max-width:500px){
+  h2{
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width:400px){
+  .camp-card{
+    width: 85%;
+  }
+  h2{
+    font-size: 22px;
+  }
+  .camp-card p{
+    font-size: 15px;
+  }
+}
+
+/* Styling Contact form starts here. */
+
+/* Styling Contact form ends here. */
+
+/* Styling Footer */
+.container-footer{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer-col ul{
+	list-style: none;
+}
+.footer{
+	background-color: var(--rare-color);
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: var(--border-color);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+  color: var(--text-color);
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+    text-align: center;
+}
+.footer-col h4::before{
+  left: 45%;
+}}
+
+.below{
+  background-color:#091129;
+  padding: 15px 23px;
+  color: #fff;
+  text-align: center;
+}
+.below span a{
+  color: crimson;
+  text-decoration: none;
+}
+.below span a:hover{
+  text-decoration: underline;
+}
+
+/* Styling Footer (end) */
+
+/* Styling Image Gallery starts here*/
+::selection {
+  color: #fff;
+  background: #007bff;
+}
+  
+.wrapper {
+  margin: 100px auto;
+  max-width: 1100px;
+}
+
+.wrapper main {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .items {
+  display: flex;
+  max-width: 720px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.items span {
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #000c66;
+  border-radius: 50px;
+  border: 2px solid #000c66;
+  transition: all 0.3s ease;
+}
+
+.items span.active,
+.items span:hover {
+  color: #fff;
+  background: #000c66;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.gallery .image {
+  width: calc(100% / 4);
+  padding: 7px;
+}
+
+.gallery .image span {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery .image img {
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.gallery .image:hover img {
+  transform: scale(1.1);
+}
+
+.gallery .image.hide {
+  display: none;
+}
+
+.gallery .image.show {
+  animation: animate 0.4s ease;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.preview-box {
+  position: fixed;
+  margin-top: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.preview-box.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+
+.preview-box .details {
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details .title {
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.details .title p {
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.details .icon {
+  color: #000C66;
+  font-style: 22px;
+  cursor: pointer;
+}
+
+.preview-box .image-box {
+  width: 100%;
+  display: flex;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+
+.shadow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.shadow.show {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .gallery .image {
+    width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery .image {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper main .items {
+    max-width: 600px;
+  }
+
+  main .items span {
+    padding: 7px 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    margin: 30px auto;
+  }
+
+  .wrapper main .items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main .items span {
+    margin: 5px;
+  }
+
+  .gallery .image {
+    width: 100%;
+  }
+}
+/* Styling Image Gallery ends here*/
+
+    /* Styling Image gallery cover page starts  here */
+    .home-content {
+      height: 50vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    head {
+      position: relative;
+    }
+
+    .text-body {
+      position: absolute;
+      top: 25%;
+      left: 35%;
+      transform: translate(-25%, -35%);
+    }
+
+    .text-body h2 {
+      color: #fff;
+      font-size: 50px;
+    }
+
+    .home-content .home-images {
+      height: 100%;
+      width: 100%;
+    }
+
+    .home-images img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* Adding Media queries to make responsive */
+    @media only screen and (max-width:1100px) {
+      .text-body h2 {
+        font-size: 40px;
+      }
+      .home-content {
+        height: 60vh;
+      }
+    }
+    @media only screen and (max-width:840px) {
+      .home-content {
+        height: 50vh;
+      }
+      .text-body h2 {
+        display: none;
+      }
+    }
+    @media only screen and (max-width:660px) {
+      .home-content {
+        height: 30vh;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+    @media only screen and (max-width:450px) {
+      .home-content {
+        height: 25vh;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+    /* Styling Image gallery cover page ends here */
+
+        /* Styling About page starts here  */
+        .about-home-img {
+            width: 100%;
+            height: 60vh;
+            background: url("./img/university.jpg");
+            background-color: skyblue;
+            background-repeat: no-repeat;
+            background-position: center;
+            object-fit: contain;
+            position: relative;
+        }
+
+        .about-home-img h2 {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+        }
+
+        .about-university {
+            width: 100%;
+            margin: 20px 0;
+            display: flex;
+            background-color: var(--primary-color);
+        }
+
+        .about-university .univ-img {
+            width: 40%;
+            padding: 20px;
+        }
+
+        .about-university .univ-img img {
+            width: 100%;
+            object-fit: contain;
+            border: 2px solid grey;
+            padding: 4px;
+            border-radius: 4px;
+            background-color: #f2f2f2;
+        }
+
+        .about-university .univ-img h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-university .univ-text {
+            padding: 15px;
+            width: 60%;
+            /* border: 2px solid var(--border-color); */
+            /* margin:40px 0; */
+        }
+
+        .about-university .home-txt h3 {
+            color: var(--rare-color);
+        }
+
+        .about-university .home-txt p {
+            color: var(--rare-color);
+            font-size: 20px;
+            padding-top: 5px;
+        }
+
+        /* Making Responsive for mobile device */
+        @media only screen and (max-width:800px) {
+            .about-university {
+                flex-direction: column;
+            }
+
+            .about-university .univ-img {
+                width: 100%;
+                padding: 20px;
+                display: block;
+                text-align: center;
+            }
+
+            .about-university .univ-img img {
+                width: 50%;
+            }
+
+            .about-university .univ-text {
+                padding: 20px;
+                width: 100%;
+                /* border: 2px solid var(--border-color); */
+                /* margin:40px 0; */
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+            .about-university .univ-img img {
+                width: 85%;
+            }
+
+            .about-home-img h2 {
+                font-size: 30px;
+            }
+        }
+
+        /* -----------For iPad Pro" ----------- */
+        /* Portrait and Landscape */
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+            .about-home-img {
+                height: 50vh;
+            }
+        }
+
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+            .about-home-img {
+                height: 50vh;
+            }
+        }
+        /* Styling About page ends here  */
+
+
+  
+/*----- course -----*/
+
+.course{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.course h1{
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--rare-color);
+}
+
+.course p{
+  color: black;
+}
+
+.course-col p{
+  color: #f2f2f2;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.course-col{
+  flex-basis: 31%;
+  background: #000C66;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.course-col h3{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  color: var(--border-color);
+}
+.course-col:hover{
+  box-shadow: 0 0 20px 10px rgba(32, 22, 22, 0.2);
+}
+@media(max-width: 700px){
+  .row{
+      flex-direction: column;
+  }
+}
+
+
+/*------- facilities ----------*/
+
+.facilities{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.facilities h1{
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--rare-color);
+}
+
+.facilities p{
+  color: black;
+}
+
+.course-col p{
+  color: #f2f2f2;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+.facilities-col{
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+.facilities-col img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.facilities-col p{
+  padding: 0;
+}
+.facilities-col h3{
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}

@@ -1,0 +1,64 @@
+:root{
+    --text-color:#F3F5F7;
+    --rare-color:#0A1433;
+    --primary-color:#C5CBE7;
+    --border-color:#B83D43;
+}
+
+/* Styling button */
+.btn{
+    margin-top: 20px;
+    padding: 5px 9px;
+    font-size: 19px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all .7s ease;
+
+}
+.btn:hover{
+    font-size: 21px;
+    color: var(--text-color);
+    background-color: var(--rare-color);
+    border: 2px solid var(--rare-color);
+    outline: none;
+}
+
+.btn-card{
+    color: black;
+    margin:10px 0;
+    border: 2px solid var(--rare-color);
+}
+.btn-camp{
+    color: var(--border-color);
+    border: 2px solid var(--border-color);
+}
+.btn-camp:hover{
+    background-color: var(--border-color);
+    color: var(--text-color);
+    outline: none;
+}
+
+
+h1,p{
+    color: var(--text-color);
+}
+h1{
+    font-size: 70px;
+}
+h3{
+    font-size: 25px;
+    color: var(--border-color);
+}
+p{
+    font-size: 15px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}

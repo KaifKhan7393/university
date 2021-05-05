@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Image gallery</title>
+
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Internal Css link -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="utility.css">
+
+  <!-- External js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- navgaition menu starts here -->
+  <nav class="navbar">
+    <div class="max-width">
+      <div class="logo"><a href="#">University</a></div>
+      <ul class="menu">
+        <li><a href="index.html" class="menu-btn">Home</a></li>
+        <li><a href="#" class="menu-btn">About</a></li>
+        <li><a href="#campus" class="menu-btn">Campus</a></li>
+        <li><a href="#" class="menu-btn">Students</a></li>
+        <li><a href="#" class="menu-btn">Contact</a></li>
+      </ul>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <!-- navigation menu ends here -->
+
+
+  <!-- Home Page  starts here -->
+  <header class="main-body">
+    <header class="head">
+      <div class="home-content">
+        <div class="home-images">
+          <img class="image-changer" src="./img/camp1.jpg">
+          <img class="image-changer" src="./img/camp2.jpg">
+          <img class="image-changer" src="./img/camp3.jpg">
+          <img class="image-changer" src="./img/camp4.jpg">
+          <img class="image-changer" src="./img/camp5.jpg">
+        </div>
+      </div>
+    </header>
+    <div class="text-body">
+      <h2>College Image Gallery</h2>
+    </div>
+  </header>
+  <!-- Home Page ends here -->
+
+
+  <section class="sect-img">
+    <div class="wrapper">
+      <!-- filter Items starts here -->
+      <main>
+        <div class="items">
+          <span class="item active" data-name="all">All</span>
+          <span class="item" data-name="campus">Campus</span>
+          <span class="item" data-name="class">Class</span>
+          <span class="item" data-name="library">Library</span>
+          <span class="item" data-name="sports">Sports</span>
+          <span class="item" data-name="labs">Labs</span>
+        </div>
+      </main>
+      <!-- filter Images ends here -->
+      <div class="gallery" id="campus">
+        <div class="image" data-name="campus"><span><img src="./img/camp1.jpg" alt=""></span></div>
+        <div class="image" data-name="campus"><span><img src="./img/camp3.jpg" alt=""></span></div>
+        <div class="image" data-name="campus"><span><img src="./img/camp6.jpg" alt=""></span></div>
+        <div class="image" data-name="class"><span><img src="./img/class1.jpg" alt=""></span></div>
+        <div class="image" data-name="class"><span><img src="./img/class2.jpg" alt=""></span></div>
+        <div class="image" data-name="library"><span><img src="./img/lib1.jpg" alt=""></span></div>
+        <div class="image" data-name="library"><span><img src="./img/lib2.jpg" alt=""></span></div>
+        <div class="image" data-name="sports"><span><img src="./img/sport1.jpg" alt=""></span></div>
+        <div class="image" data-name="sports"><span><img src="./img/sport2.jpg" alt=""></span></div>
+        <div class="image" data-name="labs"><span><img src="./img/lab1.jpg" alt=""></span></div>
+        <div class="image" data-name="labs"><span><img src="./img/lab2.jpg" alt=""></span></div>
+        <div class="image" data-name="labs"><span><img src="./img/lab3.jpg" alt=""></span></div>
+      </div>
+    </div>
+    <!-- fullscreen img preview box starts here -->
+    <div class="preview-box">
+      <div class="details">
+        <span class="title">Full Image Preview: <p></p></span>
+        <span class="icon fas fa-times"></span>
+      </div>
+      <div class="image-box"><img src="" alt=""></div>
+    </div>
+    <div class="shadow"></div>
+  </section>
+  <!-- fullscreen img preview box ends here -->
+
+  <!-- Adding Footer starts here -->
+  <footer class="footer">
+    <div class="container-footer">
+      <div class="row">
+        <div class="footer-col">
+          <h4></h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shipping</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Link</h4>
+          <ul>
+            <li><a href="#">University Site</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="below">
+    <span>Created By <a href="https://kaifkhan7393.github.io/KaifKhan/">Kaif Ayaz Khan</a></span> | <span
+      class="far fa-copyright"></span> University 2021 All rights reserved.</span>
+  </div>
+  <!-- Adding Footer ends here -->
+
+  <!-- Linking js file -->
+  <script src="app.js"></script>
+
+</body>
+
+</html>
